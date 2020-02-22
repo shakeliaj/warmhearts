@@ -6,8 +6,7 @@ const Button = () => {
 }
 
 const IngineButton = styled.button`
-    width: 150px;
-    height: 50px;
+    ${props => props.theme.button};
     background-color: ${props => props.theme.primaryColor};
     color: ${props => props.theme.secondaryColor};
     border: 2px solid ${props => props.theme.accentColor};
