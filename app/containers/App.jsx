@@ -9,10 +9,22 @@ import Home from '../pages/home/Home';
 import About from '../pages/about/About';
 import Contact from '../pages/contact/Contact';
 import theme from '../styles/theme';
+import '../styles/scss/index.scss';
 
 library.add(faBars, faChevronUp, faAtom);
 
-const navigationList = ['Home', 'About', 'Contact'];
+const navigationList = [
+  {
+    label: 'Home',
+    path: '/'
+  }, {
+    label: 'About',
+    path: '/about-us'
+  }, {
+    label: 'Contact',
+    path: '/contact'
+  }
+];
 
 const App = () => (
   <BrowserRouter>

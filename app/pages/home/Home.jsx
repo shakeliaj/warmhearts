@@ -9,6 +9,7 @@ const Home = () => (
 
 const HomeContainer = styled.div`
   ${props => props.theme.pageContainer};
+  font-family: ${props => props.theme.primaryFontFamily};
 `;
 
 export default Home;
