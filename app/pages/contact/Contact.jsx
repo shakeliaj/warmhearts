@@ -8,8 +8,19 @@ const Contact = () => {
                 <Title>Contact Us</Title>
                 <p>You can contact us by doing one of the following: </p>
                 <Cards>
-                    <Card />
-                    <Card />
+                    <Card>
+                        <ImgContainer>
+                            <img src="../../images/wh_stockpic_1.jpg" />
+                        </ImgContainer>
+                        <ContentContainer />
+                    </Card>
+                    <Card>
+                        <ImgContainer>
+                            <img src="../../images/wh_stockpic_2.jpg" />
+                        </ImgContainer>
+                        <ContentContainer>
+                        </ContentContainer>
+                    </Card>
                 </Cards>
             </CardContainer>
         </ContactContainer>
@@ -49,7 +60,7 @@ const Title = styled.h1`
     padding: 10px;
     position: absolute;
     top: 5px;
-    left: -15px;
+    left: -35px;
     background-color: #1a9e92;
     color: white;
     box-shadow: 2px 2px #d3d3d3;
@@ -79,15 +90,38 @@ const Cards = styled.div`
 `;
 
 const Card = styled.div`
-    height: 200px;
-    border: 1px solid red;
+    border: 1px dotted gray;
     display: inline -block;
-    width: 45%;
+    width: 40%;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+    transition: 0.3s;
 
+    &:hover {
+        box-shadow: 0 8px 16px 0 rgba(26,158,146,0.4);
+    }
+      
     ${props => props.theme.media.mobile`
         margin-bottom: 30px;
         width: 100%;
-    `}
+    `} 
+`;
+
+const ImgContainer = styled.div`
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+`;
+
+const ContentContainer = styled.div`
+    height: 100px;
+    background-color: white;
+    padding: 5px 10px;
 `;
 
 export default Contact;

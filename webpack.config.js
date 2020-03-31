@@ -14,7 +14,6 @@ const config = {
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
-          'style-loader',
           'css-loader',
           'sass-loader',
         ],
@@ -25,7 +24,7 @@ const config = {
     ],
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx', '.scss'],
+    extensions: ['*', '.js', '.jsx'],
   },
   output: {
     path: path.join(__dirname, 'app', 'public'),
